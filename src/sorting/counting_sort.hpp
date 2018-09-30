@@ -69,4 +69,4 @@ void counting_sort(MutableIt begin,
     counting_sort(begin, end, begin);
 }
 
-}
+} // End namespace algolib::sorting
