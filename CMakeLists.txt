@@ -5,7 +5,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug
 set(CMAKE_CXX_STANDARD 17)
 
 set(ALGORITHMS_MAIN_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-set(LIB_DIR "${ALGORITHMS_MAIN_DIR}/lib")
+set(SRC_DIR "${ALGORITHMS_MAIN_DIR}/src")
 set(EXT_DIR "${ALGORITHMS_MAIN_DIR}/ext")
 set(TEST_DIR "${ALGORITHMS_MAIN_DIR}/test")
 
@@ -14,4 +14,4 @@ add_subdirectory("${TEST_DIR}")
 
 
 add_library(AlgoLib INTERFACE)
-target_include_directories(AlgoLib INTERFACE ${LIB_DIR})
+target_include_directories(AlgoLib INTERFACE ${SRC_DIR})
