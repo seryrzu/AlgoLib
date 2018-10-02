@@ -12,7 +12,7 @@
 using algolib::sorting::counting_sort;
 
 
-TEST(TestCountingSort, EmptySort) {
+TEST(UnittestCountingSort, EmptySort) {
     std::vector<int> v;
 
     counting_sort(v.cbegin(), v.cend(), v.begin(), 0, 1);
@@ -29,7 +29,7 @@ TEST(TestCountingSort, EmptySort) {
 }
 
 
-TEST(TestCountingSort, SmallVectorSorted) {
+TEST(UnittestCountingSort, SmallVectorSorted) {
     std::vector<int> v {1, 2, 3, 4, 5};
     counting_sort(v.cbegin(), v.cend(), v.begin(), 1, 5);
     ASSERT_THAT(v, testing::ElementsAre(1, 2, 3, 4, 5));
@@ -45,7 +45,7 @@ TEST(TestCountingSort, SmallVectorSorted) {
 }
 
 
-TEST(TestCountingSort, SmallVectorUnsorted) {
+TEST(UnittestCountingSort, SmallVectorUnsorted) {
     std::vector<int> sorted{1, 2, 3, 4, 5};
     std::vector<int> unsorted{5, 4, 3, 2, 1};
     {
@@ -74,7 +74,7 @@ TEST(TestCountingSort, SmallVectorUnsorted) {
 }
 
 
-TEST(TestCountingSort, SmallArrayUnsorted) {
+TEST(UnittestCountingSort, SmallArrayUnsorted) {
     std::array<int, 5> sorted{1, 2, 3, 4, 5};
     std::array<int, 5> unsorted{5, 4, 3, 2, 1};
     {
@@ -103,7 +103,7 @@ TEST(TestCountingSort, SmallArrayUnsorted) {
 }
 
 
-TEST(TestCountingSort, SmallCArrayUnsorted) {
+TEST(UnittestCountingSort, SmallCArrayUnsorted) {
     int sorted[] {1, 2, 3, 4, 5};
     int unsorted[] {5, 4, 3, 2, 1};
     {
@@ -132,7 +132,7 @@ TEST(TestCountingSort, SmallCArrayUnsorted) {
 }
 
 
-TEST(TestCountingSort, SmallString) {
+TEST(UnittestCountingSort, SmallString) {
     std::string unsorted { "sssstring" };
     std::string sorted   { "ginrsssst" };
     {
@@ -149,7 +149,7 @@ TEST(TestCountingSort, SmallString) {
 }
 
 
-TEST(TestCountingSort, SmallCString) {
+TEST(UnittestCountingSort, SmallCString) {
     char sorted[]   { "ginrsssst" };
     {
         char v[] { "sssstring" };
