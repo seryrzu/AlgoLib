@@ -22,6 +22,8 @@ def main():
 
     random.seed(params.seed)
     params.outdir = os.path.join(this_dir, params.outdir)
+    # TODO if dir exists, check its consistency with current tests_fn.hpp. If
+    # consistent stop. If not —-- report an error.
     smart_makedirs(params.outdir)
 
 
