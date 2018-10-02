@@ -15,3 +15,6 @@ add_subdirectory("${TEST_DIR}")
 
 add_library(AlgoLib INTERFACE)
 target_include_directories(AlgoLib INTERFACE ${SRC_DIR})
+
+
+# TODO add c++ compiler flags
