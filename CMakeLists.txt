@@ -6,9 +6,10 @@ include(prevent_in_source_builds)
 ###################
 project(AlgoLib CXX)
 
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/bin)
 
-set(CMAKE_CXX_STANDARD 17)
+include(check)
 
 set(ALGORITHMS_MAIN_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(SRC_DIR "${ALGORITHMS_MAIN_DIR}/src")

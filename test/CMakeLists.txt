@@ -1,5 +1,5 @@
 project(tests)
 
-link_libraries(gtest gtest_main gmock AlgoLib)
+link_libraries(AlgoLib)
 
 add_subdirectory(sorting)
