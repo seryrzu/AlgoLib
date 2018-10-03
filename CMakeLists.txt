@@ -7,7 +7,14 @@ include(prevent_in_source_builds)
 project(AlgoLib CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/bin)
+
+if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/bin)
+endif()
+
+if (${CMAKE_BUILD_TYPE} STREQUAL "RelWithDebInfo")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-release-debug/bin)
+endif()
 
 include(check)
 include(compiler_deps)
@@ -24,15 +31,3 @@ add_subdirectory("${TEST_DIR}")
 
 add_library(AlgoLib INTERFACE)
 target_include_directories(AlgoLib INTERFACE ${SRC_DIR})
-
-
-add_definitions(-Wall
-                -Wextra
-                -Wshadow
-                -Wformat=2
-                -Wfloat-equal
-                -Wconversion
-                -Wlogical-op
-                -Wno-sign-conversion
-                -Wno-long-long
-                -Wwrite-strings)
