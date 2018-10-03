@@ -13,17 +13,17 @@
 #include "tests_fn.hpp"
 #include "sorting/counting_sort.hpp"
 
-
 using algolib::sorting::tests_fns;
 using algolib::sorting::counting_sort;
 
-
 TEST(TestCountingSort, GeneratedTests) {
-    for(const auto& test_fn : tests_fns) {
+    for (const auto &test_fn : tests_fns) {
         std::ifstream in((std::string(test_fn)));
         std::vector<int> v;
         int val;
-        while(in >> val) { v.emplace_back(val); }
+        while (in >> val) {
+            v.emplace_back(val);
+        }
 
         auto sv(v);
         std::sort(sv.begin(), sv.end());

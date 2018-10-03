@@ -12,9 +12,9 @@
 // TODO: clear counting_sort with internal construction
 namespace algolib::sorting {
 
-template <typename InputIt,
-          typename OutputIt,
-          typename T>
+template<typename InputIt,
+    typename OutputIt,
+    typename T>
 void counting_sort(InputIt begin,
                    InputIt end,
                    OutputIt obegin,
@@ -37,7 +37,7 @@ void counting_sort(InputIt begin,
     }
 }
 
-template <typename MutableIt,
+template<typename MutableIt,
     typename T>
 void counting_sort(MutableIt begin,
                    MutableIt end,
@@ -48,12 +48,14 @@ void counting_sort(MutableIt begin,
                   minimum, maximum);
 }
 
-template <typename InputIt,
+template<typename InputIt,
     typename OutputIt>
 void counting_sort(InputIt begin,
                    InputIt end,
                    OutputIt obegin) {
-    if (begin == end) { return; }
+    if (begin == end) {
+        return;
+    }
 
     auto minimum = *std::min_element(begin, end);
     auto maximum = *std::max_element(begin, end);
@@ -63,7 +65,7 @@ void counting_sort(InputIt begin,
                   minimum, maximum);
 }
 
-template <typename MutableIt>
+template<typename MutableIt>
 void counting_sort(MutableIt begin,
                    MutableIt end) {
     counting_sort(begin, end, begin);
