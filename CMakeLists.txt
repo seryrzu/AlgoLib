@@ -12,7 +12,7 @@ if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/bin)
 endif()
 
-if (${CMAKE_BUILD_TYPE} STREQUAL "RelWithDebInfo")
+if (${CMAKE_BUILD_TYPE} STREQUAL "Release")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-release-debug/bin)
 endif()
 
