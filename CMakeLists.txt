@@ -19,6 +19,7 @@ endif()
 include(check)
 include(compiler_deps)
 include(libs)
+include(flags)
 
 set(ALGORITHMS_MAIN_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(SRC_DIR "${ALGORITHMS_MAIN_DIR}/src")

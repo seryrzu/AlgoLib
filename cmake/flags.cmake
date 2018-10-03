@@ -5,7 +5,6 @@ add_definitions(-Wall
                 -Wformat=2
                 -Wfloat-equal
                 -Wconversion
-                -Wlogical-op
                 -Wno-sign-conversion
                 -Wno-long-long
                 -Wwrite-strings)
