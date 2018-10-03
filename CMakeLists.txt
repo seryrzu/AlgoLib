@@ -17,4 +17,13 @@ add_library(AlgoLib INTERFACE)
 target_include_directories(AlgoLib INTERFACE ${SRC_DIR})
 
 
-# TODO add c++ compiler flags
+add_definitions(-Wall
+                -Wextra
+                -Wshadow
+                -Wformat=2
+                -Wfloat-equal
+                -Wconversion
+                -Wlogical-op
+                -Wno-sign-conversion
+                -Wno-long-long
+                -Wwrite-strings)
