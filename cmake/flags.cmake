@@ -10,14 +10,14 @@ add_definitions(-Wall
                 -Wwrite-strings)
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-    message("Making Debug Configuration...")
+    message("Making Debug Configuration")
 
     add_definitions(-g3)
     add_definitions(-D_GLIBCXX_DEBUG)
 endif()
 
-if (${CMAKE_BUILD_TYPE} STREQUAL "RelWithDebInfo")
-    message("Making Release Configuration...")
+if (${CMAKE_BUILD_TYPE} STREQUAL "Release")
+    message("Making Release Configuration")
 
     add_definitions(-g0)
     add_definitions(-O2)
