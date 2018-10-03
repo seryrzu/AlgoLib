@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.9)
 
-project(AlgoLib CXX)
-
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(prevent_in_source_builds)
+
+###################
+project(AlgoLib CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/bin)
 
