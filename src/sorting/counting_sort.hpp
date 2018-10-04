@@ -31,10 +31,11 @@ void counting_sort(InputIt begin,
         container[element]++;
     }
 
+    assert(container.size() < std::numeric_limits<long long>::max());
     for (size_t i = 0; i < container.size(); ++i) {
         auto quantity = container[i];
         for (size_t j = 0; j < quantity; ++j) {
-            *obegin = static_cast<T>(i) + minimum;
+            *obegin = static_cast<T>(static_cast<long long>(i) + static_cast<long long>(minimum));
             obegin++;
         }
     }
