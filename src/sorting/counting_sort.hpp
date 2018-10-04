@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <vector>
 #include <type_traits>
+#include <cassert>
 
 
 // TODO: clear counting_sort with internal construction
@@ -20,18 +21,20 @@ void counting_sort(InputIt begin,
                    OutputIt obegin,
                    T minimum,
                    T maximum) {
-    auto range = maximum - minimum + 1;
-    auto container = std::vector<unsigned long long>(range);
+    assert(minimum <= maximum);
+    auto range = static_cast<size_t>(maximum - minimum + 1);
+    std::vector<size_t> container(range);
 
     for (auto it = begin; it < end; it++) {
-        auto element = *it - minimum;
+        assert(minimum <= *it);
+        auto element = static_cast<size_t>(*it - minimum);
         container[element]++;
     }
 
     for (size_t i = 0; i < container.size(); ++i) {
         auto quantity = container[i];
         for (size_t j = 0; j < quantity; ++j) {
-            *obegin = i + minimum;
+            *obegin = static_cast<T>(i) + minimum;
             obegin++;
         }
     }

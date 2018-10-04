@@ -99,7 +99,6 @@ TEST(UnittestCountingSort, SmallArrayUnsorted) {
 
 TEST(UnittestCountingSort, SmallCArrayUnsorted) {
     int sorted[]{1, 2, 3, 4, 5};
-    int unsorted[]{5, 4, 3, 2, 1};
     {
         int v[]{5, 4, 3, 2, 1};
         counting_sort(v, v + 5, v, 1, 5);
