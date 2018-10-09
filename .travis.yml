@@ -1,6 +1,7 @@
 language: cpp
 compiler: gcc
 
+
 matrix:
   fast_finish: true
   include:
@@ -15,6 +16,10 @@ matrix:
             - python3.6
       env:
          - MATRIX_EVAL="CXX=g++-7"
+
+-before_install:
+    - eval "${MATRIX_EVAL}"
+    - alias python=python3
 
 
 script: make && make test
