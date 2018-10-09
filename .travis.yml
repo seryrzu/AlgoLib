@@ -16,8 +16,12 @@ matrix:
       env:
          - MATRIX_EVAL="CXX=g++-7"
 
-script: 
-    - shopt -s expand_aliases
+
+before_script:
     - eval "${MATRIX_EVAL}"
     - alias python=python3
+    - shopt -s expand_aliases
+
+
+script: 
     - make && make test
