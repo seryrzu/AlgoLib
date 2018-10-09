@@ -19,7 +19,7 @@ all: cmake
 cmake:
 	-mkdir ${cmake_build_dir}
 	cd ${cmake_build_dir} && cmake .. -DCMAKE_BUILD_TYPE=${build_type}
-
+	ln -sf ${cmake_build_dir}/compile_commands.json .
 
 
 .tests_generated:
@@ -36,6 +36,7 @@ test: all .tests_generated
 clean:
 	-@rm -r cmake-build-debug 2>/dev/null||:
 	-@rm -r cmake-build-release 2>/dev/null||:
+	-@rm -r compile_commands.json 2>/dev/null||:
 	-@rm .tests_generated 2>/dev/null||:
 	-@rm -r test/sorting/tests 2>/dev/null||:
 	-@rm -r test/sorting/tests_fn.hpp 2>/dev/null||:

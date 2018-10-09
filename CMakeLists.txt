@@ -7,6 +7,7 @@ include(prevent_in_source_builds)
 project(AlgoLib CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(set_runtime_output_directory)
 include(check)
