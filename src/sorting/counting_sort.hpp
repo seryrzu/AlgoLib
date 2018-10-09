@@ -23,6 +23,7 @@ void counting_sort(InputIt begin,
                    T maximum) {
     assert(minimum <= maximum);
     auto range = static_cast<size_t>(maximum - minimum + 1);
+    assert(range < std::numeric_limits<long long>::max());
     std::vector<size_t> container(range);
 
     for (auto it = begin; it < end; it++) {
@@ -31,7 +32,6 @@ void counting_sort(InputIt begin,
         container[element]++;
     }
 
-    assert(container.size() < std::numeric_limits<long long>::max());
     for (size_t i = 0; i < container.size(); ++i) {
         auto quantity = container[i];
         for (size_t j = 0; j < quantity; ++j) {

@@ -49,7 +49,8 @@ def main():
         with open(filename, 'w') as f:
             print(' '.join(sample), file=f)
 
-    tests_hpp_generator(filenames, os.path.join(THIS_DIR, 'tests_fn.hpp'),
+    tests_hpp_generator(filenames,
+                        os.path.join(THIS_DIR, 'tests_filenames.hpp'),
                         'algolib::sorting')
 
 

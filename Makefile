@@ -39,4 +39,4 @@ clean:
 	-@rm compile_commands.json 2>/dev/null||:
 	-@rm .tests_generated 2>/dev/null||:
 	-@rm -r test/sorting/tests 2>/dev/null||:
-	-@rm -r test/sorting/tests_fn.hpp 2>/dev/null||:
+	-@rm -r test/sorting/tests_filenames.hpp 2>/dev/null||:

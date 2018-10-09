@@ -10,17 +10,17 @@
 #include <string>
 #include <chrono>
 
-#include "tests_fn.hpp"
+#include "tests_filenames.hpp"
 #include "sorting/counting_sort.hpp"
 
-using algolib::sorting::tests_fns;
+using algolib::sorting::tests_filenames;
 using algolib::sorting::counting_sort;
 
 TEST(TestCountingSort, GeneratedTests) {
-    for (const auto &test_fn : tests_fns) {
-        std::ifstream in((std::string(test_fn)));
+    for (const auto &test_filename : tests_filenames) {
+        std::ifstream in((std::string(test_filename)));
         std::vector<int> v;
-        int val;
+        int val {0};
         while (in >> val) {
             v.emplace_back(val);
         }
