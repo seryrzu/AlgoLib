@@ -23,7 +23,7 @@ cmake:
 
 
 .tests_generated:
-	find test -name 'tests_generator.py' -exec python "{}" \;
+	find test -name 'tests_generator.py' -print0 | xargs -I {} -n 1 -0 python "{}"
 	touch .tests_generated
 
 
