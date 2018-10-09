@@ -20,12 +20,12 @@ def main():
                         default=50, type=int)
     parser.add_argument("--min-elem", help="Min element",
                         default=-10000, type=int)
-    parser.add_argument("--max-elem", help="Min element",
+    parser.add_argument("--max-elem", help="Max element",
                         default=+10000, type=int)
     parser.add_argument("--min-size", help="Min sample size",
                         default=1000, type=int)
-    parser.add_argument("--max-size", help="Min sample size",
-                        cdefault=100000, type=int)
+    parser.add_argument("--max-size", help="Max sample size",
+                        default=100000, type=int)
     parser.add_argument("--seed", help="Seed for simulations",
                         default=random.randint(0, 1000000), type=int)
     params = parser.parse_args()
