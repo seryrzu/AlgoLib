@@ -1,5 +1,4 @@
 language: cpp
-compiler: gcc
 
 
 matrix:
@@ -18,6 +17,7 @@ matrix:
          - MATRIX_EVAL="CXX=g++-7"
 
 -before_install:
+    - shopt -s expand_aliases
     - eval "${MATRIX_EVAL}"
     - alias python=python3
 
