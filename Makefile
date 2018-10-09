@@ -1,6 +1,10 @@
 # Default build type. Available: Debug, Release
 build_type?=Debug
 
+####################
+# Check build type #
+####################
+
 ifeq ($(build_type), Debug)
     cmake_build_dir:="cmake-build-debug"
 else
@@ -11,9 +15,18 @@ else
     endif
 endif
 
-.PHONY: cmake clean
+################
+# Run Makefile #
+################
 
-all: cmake
+.PHONY: cmake clean check_python_version
+
+
+all: check_requirenments cmake 
+
+
+check_requirenments:
+	python check_requirenments.py
 
 
 cmake:
