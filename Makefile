@@ -26,7 +26,7 @@ all: check_requirenments cmake
 
 
 check_requirenments:
-	python check_requirenments.py
+	python check_requirements.py
 
 
 cmake:
