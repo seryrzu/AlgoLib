@@ -1,12 +1,9 @@
 language: cpp
 compiler: gcc
-python: 
-    - 3.6
 
 matrix:
   fast_finish: true
   include:
-    # works on Precise and Trusty
     - os: linux
       addons:
         apt:
@@ -14,6 +11,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-7
+            - python3.6
       env:
          - MATRIX_EVAL="CXX=g++-7"
 
