@@ -17,7 +17,7 @@ matrix:
 
 before_install:
     - eval "${MATRIX_EVAL}"
-    - sudo add-apt-repository ppa:deadsnakes/ppa
+    - sudo add-apt-repository ppa:deadsnakes/ppa -y
     - sudo apt-get update -q
     - sudo apt-get install python3.6 -y
 
