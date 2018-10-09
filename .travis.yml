@@ -18,9 +18,9 @@ matrix:
 
 
 before_script:
+    - shopt -s expand_aliases
     - eval "${MATRIX_EVAL}"
     - alias python=python3
-    - shopt -s expand_aliases
 
 
 script: 
