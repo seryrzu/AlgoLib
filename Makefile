@@ -36,7 +36,7 @@ test: all .tests_generated
 clean:
 	-@rm -r cmake-build-debug 2>/dev/null||:
 	-@rm -r cmake-build-release 2>/dev/null||:
-	-@rm -r compile_commands.json 2>/dev/null||:
+	-@rm compile_commands.json 2>/dev/null||:
 	-@rm .tests_generated 2>/dev/null||:
 	-@rm -r test/sorting/tests 2>/dev/null||:
 	-@rm -r test/sorting/tests_fn.hpp 2>/dev/null||:
