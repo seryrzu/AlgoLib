@@ -9,14 +9,16 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - deadsnakes-ppa
           packages:
             - g++-7
-            - python3.6
       env:
          - MATRIX_EVAL="CXX=g++-7"
 
+
 before_install:
     - eval "${MATRIX_EVAL}"
+    - sudo add-apt-repository ppa:deadsnakes/ppa
+    - sudo apt-get update -q
+    - sudo apt-get install python3.6 -y
 
 script: make && make test
